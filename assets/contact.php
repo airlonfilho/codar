@@ -18,10 +18,10 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "contactformtestgg@gmail.com";
+        $recipient = "codarsofthouse@gmail.com";
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = "Novo contato via site de $name";
 
         // Build the email content.
         $email_content = "First Name: $name\n";
@@ -35,17 +35,17 @@
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            echo "Thank You! Your message has been sent.";
+            echo "Obrigado! Recebemos sua mensagem e logo entraremos em contato.";
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
+            echo "Oops! Algo deu errado, entre em contato pelo whatsapp.";
         }
 
     } else {
         // Not a POST request, set a 403 (forbidden) response code.
         http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
+        echo "Ocorreu um problema com o seu envio, tente novamente.";
     }
 
 ?>
